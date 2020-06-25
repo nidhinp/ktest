@@ -1,0 +1,1 @@
+A sample repo to test kubetest usage in Github actions.
