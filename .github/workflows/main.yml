@@ -35,8 +35,8 @@ jobs:
 
       - name: Getting the kube config file
         run: |
-          echo ${{ secrets.KUBECONFIG }} | base64 --decode > ${{GITHUB_WORKSPACE}}/.kubeconfig
+          echo ${{ secrets.KUBECONFIG }} | base64 --decode > GITHUB_WORKSPACE/.kubeconfig
       
       - name: Run unit tests
         run: |
-          pytest -s . --kube-config=${{GITHUB_WORKSPACE}}/.kubeconfig
+          pytest -s . --kube-config=GITHUB_WORKSPACE/.kubeconfig
