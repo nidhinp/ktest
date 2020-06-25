@@ -28,7 +28,6 @@ def creaet_ns(ns):
 
 
 def install_argo(ns):
-    call(['kubectl', 'apply', '-n', ns, '-f', 'install.yml'])
     call(['kubectl', 'apply', '-n', ns, '-f', 'quick-start.yml'])
     call([
         'kubectl', 'create', 'rolebinding', 'default-admin',
@@ -44,7 +43,7 @@ def run_argo_workflow(ns):
 
 
 def main():
-    namespace = 'jjo'
+    namespace = 'foo'
     creaet_ns(namespace)
 
 
